@@ -1,0 +1,89 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+            background: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 25px;
+            justify-content: space-between;
+        }
+        .menu-btn span {
+            display: block;
+            height: 4px;
+            background: #fff;
+            border-radius: 2px;
+            transition: 0.4s;
+        }
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #333;
+                flex-direction: column;
+                width: 200px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            nav.open {
+                max-height: 300px;
+            }
+            .menu-btn {
+                display: flex;
+            }
+        }
+        main {
+            padding: 100px 2rem 2rem 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 80px;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }

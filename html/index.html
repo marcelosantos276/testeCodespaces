@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilo.css">
+    <title>Página Inicial</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+            background: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 25px;
+            justify-content: space-between;
+        }
+        .menu-btn span {
+            display: block;
+            height: 4px;
+            background: #fff;
+            border-radius: 2px;
+            transition: 0.4s;
+        }
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #333;
+                flex-direction: column;
+                width: 200px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            nav.open {
+                max-height: 300px;
+            }
+            .menu-btn {
+                display: flex;
+            }
+        }
+        main {
+            padding: 100px 2rem 2rem 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 80px;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <div class="logo">Meu Site</div>
+        <div class="menu-btn" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Bem-vindo ao Meu Site</h1>
+            <p>Esta é a página inicial com menu sanduíche e navegação por âncoras.</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Informações sobre o site e sua proposta.</p>
+        </section>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Descrição dos serviços oferecidos.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Formas de entrar em contato conosco.</p>
+        </section>
+    </main>
+    <script src="../javascript/javascript.js"></script>
+    <!-- <script>
+        // Menu sanduíche
+        const menuBtn = document.getElementById('menu-btn');
+        const nav = document.getElementById('nav');
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+        // Fechar menu ao clicar em um link (mobile)
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+            });
+        });
+        // Animação das seções ao rolar
+        function revealSections() {
+            document.querySelectorAll('section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if(rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script> -->
+</body>
+</html>
