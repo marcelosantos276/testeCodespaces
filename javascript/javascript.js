@@ -1,23 +1,31 @@
-/// Menu sanduíche
-        const menuBtn = document.getElementById('menu-btn');
-        const nav = document.getElementById('nav');
-        menuBtn.addEventListener('click', () => {
-            nav.classList.toggle('open');
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleciona todos os links do menu
+    const menuLinks = document.querySelectorAll('nav a');
+    // Seleciona todas as seções de conteúdo
+    const sections = document.querySelectorAll('section');
+
+    // Função para mostrar a seção correspondente e esconder as outras
+    function showSection(id) {
+        sections.forEach(section => {
+            section.style.display = section.id === id ? 'block' : 'none';
         });
-        // Fechar menu ao clicar em um link (mobile)
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('open');
-            });
+        menuLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
-        // Animação das seções ao rolar
-        function revealSections() {
-            document.querySelectorAll('section').forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if(rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-        window.addEventListener('scroll', revealSections);
-        window.addEventListener('load', revealSections);
+    }
+
+    // Adiciona evento de clique aos links do menu
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            showSection(targetId);
+        });
+    });
+
+    // Exibe a primeira seção por padrão
+    if (sections.length > 0) {
+        showSection(sections[0].id);
+    }
+});
+
