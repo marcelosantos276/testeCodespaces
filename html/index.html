@@ -3,46 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilo.css">
     <title>Página Inicial</title>
 </head>
 <body>
     <header>
-        <div class="logo"></div>
-            <h1>🌟 ETEC de Campo Limpo Paulista 🌟</h1>
-        </div>
-        <div class="menu-btn" id="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav id="nav" class="menu">
-            <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="logo me-2"></div>
+                    🌟 ETEC de Campo Limpo Paulista 🌟
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="inicio">
-            <h1>Bem-vindo ao Meu Site</h1>
-            <p>Esta é a página inicial com menu sanduíche e navegação por âncoras.</p>
+    <main class="container my-5">
+        <section id="inicio" class="mb-5">
+            <div class="text-center">
+                <h1>Bem-vindo ao Meu Site</h1>
+                <p class="lead">Esta é a página inicial com menu sanduíche e navegação por âncoras.</p>
+                <!-- Carousel de imagens -->
+                <div id="carouselInicio" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width:600px;">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80" class="d-block w-100 rounded" alt="Campus ETEC">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Campus ETEC</h5>
+                        <p>Ambiente moderno e acolhedor.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" class="d-block w-100 rounded" alt="Laboratório de Informática">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Laboratório de Informática</h5>
+                        <p>Equipamentos de última geração para os alunos.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" class="d-block w-100 rounded" alt="Biblioteca">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Biblioteca</h5>
+                        <p>Espaço para estudos e pesquisas.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselInicio" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselInicio" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                  </button>
+                </div>
+            </div>
         </section>
-        <section id="sobre">
-            <h2>Sobre</h2>
-            <p>Informações sobre o site e sua proposta.</p>
+        <section id="sobre" class="mb-5">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-start p-2" alt="Equipe ETEC">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">Sobre</h2>
+                            <p class="card-text">
+                                Este site foi desenvolvido como exemplo para demonstrar o uso do Bootstrap em páginas web modernas.
+                                Aqui, você encontra informações sobre a ETEC de Campo Limpo Paulista, nossos serviços e formas de contato.
+                                Nosso objetivo é facilitar o acesso à informação e promover a tecnologia na educação.
+                            </p>
+                            <ul>
+                                <li>Fundada em 2005</li>
+                                <li>Foco em cursos técnicos e tecnológicos</li>
+                                <li>Equipe dedicada de professores e colaboradores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <p>Descrição dos serviços oferecidos.</p>
+        <section id="servicos" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Serviços</h2>
+                    <p class="card-text">
+                        Oferecemos uma variedade de serviços para alunos, professores e comunidade:
+                    </p>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Orientação acadêmica">
+                                <div class="card-body">
+                                    <h5 class="card-title">Orientação acadêmica</h5>
+                                    <p class="card-text">Apoio para desenvolvimento profissional e acadêmico.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Laboratórios de tecnologia">
+                                <div class="card-body">
+                                    <h5 class="card-title">Laboratórios de tecnologia</h5>
+                                    <p class="card-text">Espaços equipados para práticas e experimentos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Biblioteca">
+                                <div class="card-body">
+                                    <h5 class="card-title">Biblioteca</h5>
+                                    <p class="card-text">Acervo atualizado para consulta e estudo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Eventos e workshops">
+                                <div class="card-body">
+                                    <h5 class="card-title">Eventos e workshops</h5>
+                                    <p class="card-text">Atividades para integração e aprendizado contínuo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Atendimento ao aluno e suporte pedagógico</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section id="contato">
-            <h2>Contato</h2>
-            <p>Formas de entrar em contato conosco.</p>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-5 d-flex align-items-center justify-content-center">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-start p-2" alt="Contato ETEC">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h2 class="card-title">Contato</h2>
+                            <p class="card-text">
+                                Entre em contato conosco para dúvidas, sugestões ou informações adicionais:
+                            </p>
+                            <ul>
+                                <li><strong>Email:</strong> contato@etecclp.com.br</li>
+                                <li><strong>Telefone:</strong> (11) 1234-5678</li>
+                                <li><strong>Endereço:</strong> Rua Exemplo, 123 - Campo Limpo Paulista, SP</li>
+                            </ul>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../javascript/javascript.js"></script>
 </body>
 </html>
