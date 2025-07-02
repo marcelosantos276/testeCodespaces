@@ -1,4 +1,4 @@
-// Menu sanduíche
+/// Menu sanduíche
         const menuBtn = document.getElementById('menu-btn');
         const nav = document.getElementById('nav');
         menuBtn.addEventListener('click', () => {
